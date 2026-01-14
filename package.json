@@ -1,0 +1,20 @@
+{
+  "name": "todo-devops-assignment",
+  "version": "1.0.0",
+  "description": "A simple, modern Todo List application built for an Advanced Git & DevOps Team Collaboration Assignment using HTML, CSS, and Vanilla JavaScript.",
+  "private": true,
+  "scripts": {
+    "build": "echo \"Static app - no build step required\"",
+    "start": "npx --yes serve ./src"
+  },
+  "keywords": [
+    "todo",
+    "devops",
+    "vanilla-js",
+    "vercel",
+    "netlify"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo DevOps Assignment</title>
+    <meta
+      name="description"
+      content="A simple, modern Todo List application built for an Advanced Git & DevOps Team Collaboration Assignment."
+    />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <h1>Team Todo Board</h1>
+        <p class="subtitle">
+          Simple, collaborative-friendly todo app for the Advanced Git &amp; DevOps assignment.
+        </p>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="container card">
+        <!-- Task input section -->
+        <section class="task-input" aria-labelledby="add-task-heading">
+          <h2 id="add-task-heading" class="visually-hidden">Add a new task</h2>
+          <form id="task-form" class="task-form" autocomplete="off">
+            <label class="visually-hidden" for="task-input">New task</label>
+            <input
+              id="task-input"
+              name="task"
+              type="text"
+              placeholder="Type a new task and press Enter or click Add"
+              aria-label="Task description"
+              required
+            />
+            <button type="submit" id="add-task-btn" class="btn primary">
+              Add
+            </button>
+          </form>
+        </section>
+
+        <!-- Controls: filters + counters -->
+        <section class="task-controls" aria-label="Task filters and summary">
+          <div class="filters" role="radiogroup" aria-label="Filter tasks">
+            <button
+              type="button"
+              class="btn filter-btn active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              class="btn filter-btn"
+              data-filter="active"
+              aria-pressed="false"
+            >
+              Active
+            </button>
+            <button
+              type="button"
+              class="btn filter-btn"
+              data-filter="completed"
+              aria-pressed="false"
+            >
+              Completed
+            </button>
+          </div>
+
+          <div class="counters" aria-live="polite">
+            <span id="total-count">Total: 0</span>
+            <span id="active-count">Active: 0</span>
+            <span id="completed-count">Completed: 0</span>
+          </div>
+        </section>
+
+        <!-- Task list -->
+        <section class="task-list-section" aria-labelledby="task-list-heading">
+          <h2 id="task-list-heading" class="visually-hidden">Todo list</h2>
+          <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+          <p id="empty-state" class="empty-state">
+            No tasks yet. Add your first task to get started!
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container footer-content">
+        <p>
+          Built for the
+          <strong>Advanced Git &amp; DevOps Team Collaboration Assignment</strong>.
+        </p>
+        <p class="footer-note">
+          Data is stored locally in your browser using
+          <code>localStorage</code>.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Main application script -->
+    <script src="./scripts/app.js" type="module"></script>
+  </body>
+</html>
+
