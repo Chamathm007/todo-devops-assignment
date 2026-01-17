@@ -112,9 +112,25 @@ export function addTask(text) {
  * @param {string} id
  */
 export function deleteTask(id) {
-  tasks = tasks.filter((task) => task.id !== id);
-  saveTasksToStorage();
-  renderTasks();
+  // Find the task item element for smooth animation
+  const taskElement = document.querySelector(`.task-item[data-id="${id}"]`);
+  
+  if (taskElement) {
+    // Add removing class for smooth exit animation
+    taskElement.classList.add("removing");
+    
+    // Wait for animation to complete before actually removing
+    setTimeout(() => {
+      tasks = tasks.filter((task) => task.id !== id);
+      saveTasksToStorage();
+      renderTasks();
+    }, 300); // Match animation duration
+  } else {
+    // Fallback if element not found
+    tasks = tasks.filter((task) => task.id !== id);
+    saveTasksToStorage();
+    renderTasks();
+  }
 }
 
 /**
