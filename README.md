@@ -24,8 +24,8 @@ Built using Vanilla HTML, CSS, and JavaScript, it demonstrates modern frontend d
 
 Live Deployment
 
-🔗 **Live URL:**  
-(Add your Vercel deployment link here)
+Live URL: 
+https://todo-devops-assignment.vercel.app
 
  Technologies Used
 - HTML5  
