@@ -36,5 +36,5 @@ jobs:
 
       - name: Deployment Status
         run: |
-          echo "🚀 Deployment to Vercel completed successfully!"
+          echo "Deployment to Vercel completed successfully!"
           echo "Your app is now live at: https://todo-devops-assignment.vercel.app"
